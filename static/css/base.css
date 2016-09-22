@@ -1,0 +1,52 @@
+html{ font-size: 100% }
+* { box-sizing: border-box; }
+
+body {
+    background: #fff;
+    font-size: 16px;
+    line-height: 1.2;
+    width: 100%;
+    margin: 0;
+}
+
+div.title {
+    background: #007c7c;
+    color: #fff;
+    overflow: hidden;
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 140px;
+}
+
+div.title h1 {
+    font-size: 440%;
+    margin: 0;
+    color #000;
+}
+
+div.title small {
+    font-size: 120%;
+    color: #caf2e5;
+}
+
+div.social {
+    background: #000;
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
+    padding: 1px;
+    padding-top: 5px;
+    position: relative;
+}
+
+div.social a:link {
+    font-size: 120%;
+    color: #fff;
+    text-decoration: none;
+}
+
+div.social a:visited {
+    font-size: 120%;
+    color: #fff;
+    text-decoration: none;
+}
