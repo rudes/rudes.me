@@ -11,7 +11,7 @@ import (
 const (
 	_staticURL   = "/static/"
 	_staticRoot  = "/go/src/github.com/rudes/rudes.me/static/"
-	_templateDir = "/go/src/github.com/rudes/rudes.me/templates/"
+	_templateDir = "/go/src/github.com/rudes/rudes.me/static/templates/"
 )
 
 func main() {
