@@ -1,4 +1,4 @@
-html{ font-size: 100% }
+html{ font-size: 100%; }
 * { box-sizing: border-box; }
 
 body {
@@ -15,7 +15,7 @@ div.title {
     overflow: hidden;
     text-align: center;
     padding-top: 80px;
-    padding-bottom: 140px;
+    padding-bottom: 80px;
 }
 
 div.title h1 {
@@ -34,19 +34,59 @@ div.social {
     text-align: center;
     width: 100%;
     overflow: hidden;
-    padding: 1px;
-    padding-top: 5px;
+    padding: 5px;
+    padding-top: 10px;
     position: relative;
 }
 
 div.social a:link {
-    font-size: 120%;
+    font-size: 140%;
     color: #fff;
     text-decoration: none;
+    padding-right: 4px;
+    padding-left: 4px;
 }
 
 div.social a:visited {
-    font-size: 120%;
+    font-size: 140%;
     color: #fff;
     text-decoration: none;
+    padding-right: 4px;
+    padding-left: 4px;
+}
+
+div.content {
+    width: 50%;
+    margin: auto;
+    overflow: hidden;
+    padding-top: 10px;
+}
+
+div.languages {
+    text-align: center;
+    font-size: 250%;
+    color: #000;
+}
+
+table.languages {
+    border-collapse: collapse;
+    width: 100%;
+    padding: 5px;
+}
+
+tr {
+    text-align: center;
+    padding: 8px;
+}
+
+tr a:link, a:visited {
+    font-size: 50%;
+    color: #000;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 980px) {
+    div.content {
+        width: 100%;
+    }
 }
