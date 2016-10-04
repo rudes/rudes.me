@@ -56,7 +56,7 @@ div.social a:visited {
 }
 
 div.content {
-    width: 50%;
+    max-width: 980px;
     margin: auto;
     overflow: hidden;
     padding-top: 10px;
@@ -72,6 +72,8 @@ table.languages {
     border-collapse: collapse;
     width: 100%;
     padding: 5px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #000;
 }
 
 tr {
@@ -85,7 +87,60 @@ tr a:link, a:visited {
     text-decoration: none;
 }
 
+div.projects {
+    padding-top: 10px;
+    text-align: center;
+    font-size: 250%;
+    color: #000;
+    display: block;
+    overflow: hidden;
+}
+
+div.row {
+    overflow: hidden;
+    margin-top: 10px;
+    margin: 0 auto;
+    padding-top: 10px;
+    border-bottom: 1px solid #000;
+}
+
+div.projects div.img {
+    float: left;
+    display: block;
+    width: 50%;
+}
+
+div.projects div.row:nth-child(2n) div.img {
+    float: right;
+}
+
+div.projects small, p {
+    font-size: 50%;
+    color: #000;
+    float: right;
+    display: inline-block;
+    width: 50%;
+}
+div.projects small {
+    font-size: 80%;
+}
+
+div.projects div.row:nth-child(2n) small,
+div.projects div.row:nth-child(2n) p {
+    float: left;
+}
+
 @media screen and (max-width: 980px) {
+    div.projects div.row:nth-child(2n) div.img,
+    div.projects div.row:nth-child(2n) small,
+    div.projects div.row:nth-child(2n) p,
+    div.projects small, p, div.img {
+        width: 100%;
+        float: none;
+    }
+    div.img {
+        text-align: center;
+    }
     div.content {
         width: 100%;
     }
