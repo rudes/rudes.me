@@ -1,5 +1,19 @@
-web:
-    build: .
-    restart: always
-    ports:
-        - "8081:8080"
+version: "3.9"
+
+services:
+    app:
+        build: .
+        container_name: rudes.me
+        restart: always
+        networks:
+            - web
+        volumes:
+            - '/var/log:/var/log'
+        labels:
+            - traefik.enable=true
+            - traefik.http.routers.rudes.entrypoints=web
+            - traefik.http.routers.rudes.rule=Host("rudes.me")
+
+networks:
+    web:
+        external: true

@@ -1,7 +1,16 @@
-FROM golang
+FROM golang AS builder
 
-ADD . /go/src/github.com/rudes/rudes.me
-RUN go install github.com/rudes/rudes.me
-ENTRYPOINT /go/bin/rudes.me
+WORKDIR /app
+COPY . .
+RUN go mod download
+RUN CGO_ENABLED=0 GOOS=linux go build -o rudes.me
 
+
+FROM alpine:latest
+RUN apk --no-cache add ca-certificates
+
+WORKDIR /app
+COPY --from=builder /app .
 EXPOSE 8080
+
+ENTRYPOINT "/app/rudes.me"

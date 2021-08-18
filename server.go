@@ -10,8 +10,8 @@ import (
 
 const (
 	_staticURL   = "/static/"
-	_staticRoot  = "/go/src/github.com/rudes/rudes.me/static/"
-	_templateDir = "/go/src/github.com/rudes/rudes.me/static/templates/"
+	_staticRoot  = "/app/static/"
+	_templateDir = "/app/static/templates/"
 )
 
 func main() {
@@ -51,23 +51,14 @@ func printLangs() template.HTML {
 	}
 	langs := []language{
 		{"C", "https://en.wikipedia.org/wiki/The_C_Programming_Language"},
-		{"C++", "https://en.wikipedia.org/wiki/C%2B%2B"},
-		{"C#", "https://en.wikipedia.org/wiki/C_Sharp_(programming_language)"},
 		{"Go", "https://golang.org/"},
-		{"Java", "https://en.wikipedia.org/wiki/Java_(programming_language)"},
-		{"Ruby", "https://www.ruby-lang.org/en/"},
 		{"Bash", "https://en.wikipedia.org/wiki/Bash_(Unix_shell)"},
 		{"Powershell", "https://en.wikipedia.org/wiki/PowerShell"},
 		{"Perl", "https://en.wikipedia.org/wiki/Perl"},
 		{"Python", "https://en.wikipedia.org/wiki/Python_(programming_language)"},
 		{"Rust", "https://www.rust-lang.org/en-US/"},
-		{"Haskell", "https://www.haskell.org/"},
-		{"TCL", "https://en.wikipedia.org/wiki/Tcl"},
-		{"VimL", "https://en.wikipedia.org/wiki/Vim_(text_editor)#Vim_script"},
-		{"JavaScript", "https://www.javascript.com/"},
-		{"KSH", "https://en.wikipedia.org/wiki/Korn_shell"},
 		{" ", " "},
-		{"PHP", "https://secure.php.net/"},
+		{"KSH", "https://en.wikipedia.org/wiki/Korn_shell"},
 	}
 	for i := 0; i < len(langs); i++ {
 		res += "<tr>"
