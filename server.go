@@ -53,12 +53,9 @@ func printLangs() template.HTML {
 		{"C", "https://en.wikipedia.org/wiki/The_C_Programming_Language"},
 		{"Go", "https://golang.org/"},
 		{"Bash", "https://en.wikipedia.org/wiki/Bash_(Unix_shell)"},
-		{"Powershell", "https://en.wikipedia.org/wiki/PowerShell"},
-		{"Perl", "https://en.wikipedia.org/wiki/Perl"},
-		{"Python", "https://en.wikipedia.org/wiki/Python_(programming_language)"},
 		{"Rust", "https://www.rust-lang.org/en-US/"},
-		{" ", " "},
-		{"KSH", "https://en.wikipedia.org/wiki/Korn_shell"},
+		{"Python", "https://en.wikipedia.org/wiki/Python_(programming_language)"},
+		{"Perl", "https://en.wikipedia.org/wiki/Perl"},
 	}
 	for i := 0; i < len(langs); i++ {
 		res += "<tr>"
